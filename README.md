@@ -12,9 +12,10 @@ Your task is to implement a basic shopping cart for a website, following these b
 * it should take you less than 1 hour to come up with an implementation, but we won't put any time limit for this challenge
 * This is implemented with angular 1. You should use Angular or ReactJS.
 
+``` javascript
 angular.module('services.cart', [])
     .service('Cart', ['$rootScope', 'Reviewer', function ($rootScope, Reviewer) { 
-        var getCart = function(){};
+        var getCart = function(){}
  
         var addItem = function(){};
  
