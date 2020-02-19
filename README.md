@@ -4,16 +4,15 @@
 
 Your task is to implement a basic shopping cart for a website, following these basic rules:
 
-* the cart needs to be implemented as an AngularJS service
+* the cart needs to be implemented as a service
 * the cart should be retrieved from the localStorage, where it's stored under the key `cart`
 * every time an action is performed on the cart, it should be persisted on the localStorage
 * the cart should only know about item IDs and their quantity
 * you will write the cart by implementing the methods of the provided cart service in the code block below: please fork it and submit your implementation
-* This is implemented with angular 1. You should use Angular or ReactJS.
+* This should be implemented with vanilla javascript.
 
 ``` javascript
-angular.module('services.cart', [])
-    .service('Cart', ['$rootScope', 'Reviewer', function ($rootScope, Reviewer) { 
+
         var getCart = function(){}
  
         var addItem = function(){};
@@ -31,16 +30,13 @@ angular.module('services.cart', [])
         var changeQuantity = function (){};
  
         var refresh = function() {};
-    }]);
 ```
 
 ### Methods explanation
 
-For some of the methods mentioned in the empty Cart service, we thought of giving you some explanation to better understand what they're there for.
-
 #### Save
 
-Checks if the cart can be persisted through the `Reviewer` service: if so, it `persist`s it.
+Save an item or items to the cart
 
 #### Clear
 
@@ -57,13 +53,6 @@ Changes the quantity of one of the items in the cart.
 #### Refresh
 
 Notifies the application that the cart has been persisted, so that other parts of the app can modify themselves based on the latest cart update.
-
-### Dependencies
-
-You are not allowed to inject any dependency on the Cart service other than the ones provided:
-
-* `$rootScope`: it is used for triggering events.
-* `Reviewer`: it's an angular service that will review the contents of the cart (`Reviewer.review(cart)`, returns a promise)
 
 ### What are we going to look for?
 
